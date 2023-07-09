@@ -73,6 +73,7 @@ li{
 #user-name{
     font-size: 48px;
     line-height: 1em;
+    margin-bottom: 18px;
 }
 
 #profile-pic{
@@ -186,5 +187,97 @@ li{
     .card--work-history{
         border-left: none;
         padding-left: 0;
+    }
+}
+
+#bio-arrow {
+    background: url(../assets/images/bio-icon-yellow.png) no-repeat;
+    background-size: 50px 100%;
+    position: relative;
+    width: 50px;
+    height: 140px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#bio-wrapper {
+    display: grid;
+    align-items: center;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+#bio-wrapper:hover .bounce   {
+    -moz-animation: bounce 0s infinite;
+    -webkit-animation: bounce 0s infinite;
+    animation: bounce 0s infinite;
+} 
+
+@keyframes bounce {
+    0%, 4%, 10%, 16%, 20% {
+        transform: translateX(0);
+    }
+
+    8% {
+        transform: translateX(50px);
+    }
+
+    12% {
+        transform: translateX(25px);
+    }
+}
+
+#bio-slide {
+    position: relative;
+    left: -60px;
+    margin-top: 0px;
+    margin-left: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 500ms 0s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    opacity: 0;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+#bio-wrapper:hover #bio-slide {
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    #user-name {
+        text-align: center;
+    }
+
+    #bio-slide {
+        left: 0;
+        opacity: 1;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+
+    .bounce {
+        -moz-animation: bounce 0s infinite;
+        -webkit-animation: bounce 0s infinite;
+        animation: bounce 0s infinite;
+    } 
+
+    #bio-arrow {
+        background: url(../assets/images/bio-icon-yellow-mobile.png) no-repeat;
+        background-size: 100% 40px;
+        width: 50%;
+        height: 50px;
+        position: relative;
+        grid-column: 2 / span 3;
+        grid-row: 1;
     }
 }
