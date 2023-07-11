@@ -120,6 +120,7 @@ li{
 
 #card--work-mock {
     display: flex;
+    justify-content: center;
 }
 
 .card--work-mock {
@@ -172,35 +173,6 @@ li{
     height: 1px;
 }
 
-
-@media(max-width:600px){
-
-    .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    #wrapper--hero{
-        display: flex;
-        align-items: center;
-        gap: 1em;
-    }
-
-    #profile-pic{
-        width: 200px;
-        height: 200px;
-    }
-
-    #wrapper--hero{
-        flex-direction: column;
-    }
-
-    .card--work-history{
-        border-left: none;
-        padding-left: 0;
-    }
-}
-
 #bio-arrow {
     background: url(../assets/images/bio-icon-yellow.png) no-repeat;
     background-size: 50px 100%;
@@ -214,6 +186,7 @@ li{
 #bio-wrapper {
     display: grid;
     align-items: center;
+    cursor: pointer;
 }
 
 .bounce {
@@ -261,9 +234,38 @@ li{
     opacity: 1;
 }
 
-@media (max-width: 600px) {
+.hp-gif {
+    width: 75%;
+}
+
+@media(max-width:600px){
+
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #wrapper--hero{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #profile-pic{
+        width: 200px;
+        height: 200px;
+    }
+
+    #wrapper--hero{
+        flex-direction: column;
+    }
+
     #user-name {
         text-align: center;
+    }
+
+    #bio-wrapper {
+        cursor: default;
     }
 
     #bio-slide {
@@ -291,4 +293,105 @@ li{
         grid-column: 2 / span 3;
         grid-row: 1;
     }
+
+    .card--work-history {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .hp-gif {
+        width: 100%;
+    }
 }
+
+.carousel-cards {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .card {
+    display: flex;
+    height: 400px;
+    width: 233px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  .card-1 {
+    background: url(../assets/images/projects/burn-island-mobile-view.gif) no-repeat;
+    background-size: cover;
+  }
+
+  .card-2 {
+    background: url(../assets/images/projects/event-details-page.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .card-3 {
+    background: url(../assets/images/projects/burn-island-details-mobile-view.gif) no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width:600px) {
+    .mobile-card {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-2-mobile {
+        display: none;
+      }
+  }
+
+  @media (min-width:601px) {
+    .mobile-card {
+        display: none;
+    }
+  }
