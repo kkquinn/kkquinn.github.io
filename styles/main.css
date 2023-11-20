@@ -12,7 +12,7 @@
     --mainLinkColor-dark:rgb(30, 190,214);
     --mainBorderColor-dark:#2b3031;
     --mainBgColor-dark:#131415;
-    
+
     --mainTextColor:var(--mainTextColor-dark);
     --secondaryTextColor:var(--secondaryTextColor-dark);
     --mainLinkColor:var(--mainLinkColor-dark);
@@ -27,11 +27,11 @@
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
-    
+
 }
 
 body{
-    background-color: var(--mainBgColor);            
+    background-color: var(--mainBgColor);
 }
 
 p, span, li{
@@ -199,7 +199,7 @@ li{
     -moz-animation: bounce 0s infinite;
     -webkit-animation: bounce 0s infinite;
     animation: bounce 0s infinite;
-} 
+}
 
 @keyframes bounce {
     0%, 4%, 10%, 16%, 20% {
@@ -282,7 +282,7 @@ li{
         -moz-animation: bounce 0s infinite;
         -webkit-animation: bounce 0s infinite;
         animation: bounce 0s infinite;
-    } 
+    }
 
     #bio-arrow {
         background: url(../assets/images/bio-icon-yellow-mobile.png) no-repeat;
@@ -308,9 +308,9 @@ li{
     display: flex;
     justify-content: center;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
-  
+
   .card {
     display: flex;
     height: 400px;
@@ -322,22 +322,22 @@ li{
     position: relative;
     left: 0px;
   }
-  
+
   .card:not(:first-child) {
       margin-left: -50px;
   }
-  
+
   .card:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
   }
-  
+
   .card:hover ~ .card {
     position: relative;
     left: 50px;
     transition: 0.4s ease-out;
   }
-  
+
   .title {
     color: white;
     font-weight: 300;
@@ -345,20 +345,20 @@ li{
     left: 20px;
     top: 15px;
   }
-  
-  
+
+
   .stroke {
     stroke: white;
     stroke-dasharray: 360;
     stroke-dashoffset: 360;
     transition: 0.6s ease-out;
   }
-  
+
   svg {
     fill: #17141d;
     stroke-width: 2px;
   }
-  
+
   .card:hover .stroke {
     stroke-dashoffset: 100;
     transition: 0.6s ease-out;
@@ -383,9 +383,11 @@ li{
     .mobile-card {
         display: flex;
         justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
-    .card-2-mobile {
+    .card-mobile {
         display: none;
       }
   }
